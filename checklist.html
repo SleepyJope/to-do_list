@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3  {display: inline-block;  background-color: #5C8374;padding: 10px; border-radius: 3px;}
+        div {background-color: #5C8374; display: inline-block; padding: 10px; border-radius: 3px}
+        
+    </style>
+</head>
+<body style="text-align: center; background-color: #9EC8B9;" >
+    
+    <h3>Make your to-do list:</h3> <br>
+
+    <div class="div">
+    <input type="text" id="input" placeholder="escreve algo">
+    <button onclick="cria()">e adiciona</button>
+    </div> <br><br>
+
+    
+    
+    <div id="div" style="display: none;"></div>
+    
+   
+    
+    
+    <script>
+
+        input 
+        
+
+        function cria(){
+          
+            const imputado = document.getElementById("input").value;
+
+            const divs = document.getElementById("div");
+            
+            divs.setAttribute("style", "dsiplay: inline-block");
+
+            divs.innerHTML += '<div> <input type="checkbox"  id="">'+imputado+' <button onclick="desinstala()">apaga</button><br></div> <br>'  ;
+    
+        }
+
+        function desinstala(){
+            
+            const element = document.activeElement.parentElement;
+            element.remove();
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
